@@ -50,7 +50,7 @@ $(document).ready(function() {
 				var lastname_encoded = urlencode(lastname);
 				var firstname_encoded = urlencode(firstname);
 				// echo $lastname_encoded;
-				#insert your own Who's My Representative API KEY here
+				// #insert your own Who's My Representative API KEY here
 				// http://services.sunlightlabs.com/api/api.method.format?apikey=YOUR_API_KEY&params
 				var api_key = "YOUR_API_KEY"; 
 				var url = "http://services.sunlightlabs.com/api/legislators.getList.json";
