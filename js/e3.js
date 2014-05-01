@@ -11,7 +11,7 @@ $(document).ready(function() {
 			type: 'get',
 			url: 'http://whoismyrepresentative.com/getall_mems.php?zip=' + '' + zip_encoded+'&output=json',
 			success: function(responseData) {
-			# uses libcurl to return the response body of a GET request on $url
+			// # uses libcurl to return the response body of a GET request on $url
 			function getResource (url){
 				var ch = curl_init();
 				curl_setopt(ch, CURLOPT_URL, url);
@@ -42,7 +42,8 @@ $(document).ready(function() {
 					find_twitter_username(getlastname[0], getlastname[1]);
 				}
 			
-			} # find_reps
+			} 
+			// # find_reps
 			
 			
 			function find_twitter_username (firstname, lastname) {
@@ -61,7 +62,7 @@ $(document).ready(function() {
 				var feed = getResource(url);
 				var jsonObject = json_decode(feed);
 				// print_r($jsonObject);
-			# print <ul> start
+			// # print <ul> start
 				 "<ul>"; 
 				for (var responseKey in jsonObject.response) {		
 			                 var response = jsonObject.response[responseKey];
@@ -90,11 +91,12 @@ $(document).ready(function() {
 						 "<li class='clearfix'><span class='twit_icon'></span> <a href='http://twitter.com/" + twitterid + "' target='new'>@" + twitterid + "</a></li>";
 					}
 				}
-			# print <ul> closing
+			// # print <ul> closing
 				 "</ul>";
 			
 			
-			} # find_twitter_username
+			} 
+			// # find_twitter_username
 
 				$('#main').html(responseData);
 			},
