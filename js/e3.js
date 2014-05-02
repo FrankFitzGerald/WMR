@@ -16,7 +16,8 @@ $(document).ready(function() {
 				console.log('jsonObject ='+jsonObject.results[0].first_name);
 				// print_r($jsonObject);
 				var html = ['<ul>'];
-				for (var i = 0; i < jsonObject.length; i++) {	
+				for (var i = 0; i < jsonObject.length; i++) {
+					console.log('jsonObject ='+jsonObject.results[i].first_name);
 					var firstname = jsonObject.results[i].first_name;
 					var lastname = jsonObject.results[i].last_name;
 					var twitterid = jsonObject.results[i].twitter_id;
