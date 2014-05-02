@@ -15,6 +15,7 @@ $(document).ready(function() {
 				withCredentials: true
 			},
 			success: function(responseData) {
+				console.log('Success Bitches!');
 				find_reps(responseData);
 			},
 			error: function(responseData) {
