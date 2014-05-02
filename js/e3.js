@@ -13,7 +13,7 @@ $(document).ready(function() {
 			success: function(responseData){
 				console.log('Success!');
 				var feed = responseData;
-				var jsonObject = feed.results;
+				var jsonObject = feed;
 				// print_r($jsonObject);
 				 "<ul>"; 
 				for (var responseKey in jsonObject.response) {		
