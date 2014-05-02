@@ -28,8 +28,8 @@ $(document).ready(function() {
 	  	// print "<p>$url</p>";
 	
 		// var feed = getResource(url);
-		var feed = jsonObject;
-		var jsonObject = json_decode(feed);
+		// var feed = jsonObject;
+		// var jsonObject = json_decode(feed);
 		// print_r($jsonObject);
 	
 		for (var resultKey in jsonObject.results) {		
