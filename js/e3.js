@@ -14,9 +14,8 @@ $(document).ready(function() {
 			// xhrFields: {
 			// 	withCredentials: true
 			// },
-			success: {
+			success: function(responseData){
 				console.log('Success Bitches!');
-				find_reps(responseData);
 			},
 			error: function(responseData) {
 				console.log('the getReps.php ajax call failed');
