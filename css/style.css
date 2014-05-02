@@ -117,7 +117,7 @@ td { vertical-align: top; }
 
   ul:hover {
     background: rgba(0,0,0, .2);
-    padding: 0px;
+    padding: 0px 0px 0px 5px;
 
     -webkit-transition: all 0.7s ease 0s;
     -moz-transition: all 0.7s ease 0s;
