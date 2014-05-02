@@ -11,6 +11,9 @@ $(document).ready(function() {
 			crossDomain: true,
 			type: 'get',
 			url: 'http://whoismyrepresentative.com/getall_mems.php',
+			xhrFields: {
+				withCredentials: true
+			}
 			success: function(responseData) {
 				find_reps(responseData);
 			},
