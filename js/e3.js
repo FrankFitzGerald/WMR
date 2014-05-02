@@ -7,13 +7,9 @@ $(document).ready(function() {
 		e.preventDefault();
 		$.ajax({
 			data: 'zip=' + $("#search input[type='text']").val()+'&output=json&apikey=592705b32fc040f18604970c758ff7a2',
-			dataType: 'application/json',
-			crossDomain: true,
+			dataType: 'json',
 			type: 'get',
 			url: 'https://congress.api.sunlightfoundation.com/legislators/locate',
-			// xhrFields: {
-			// 	withCredentials: true
-			// },
 			success: function(data){
 				console.log('Success!');
 				var feed = responseData;
