@@ -14,8 +14,9 @@ $(document).ready(function() {
 				console.log('Success!');
 				var feed = responseData;
 				var jsonObject = feed;
+				console.log('jsonObject ='+jsonObject);
 				// print_r($jsonObject);
-				 "<ul>"; 
+				var html = ['<ul>'];
 				for (var responseKey in jsonObject.response) {		
 			                var response = jsonObject.response[responseKey];
 					firstname = response[0].legislator.firstname;
@@ -34,18 +35,18 @@ $(document).ready(function() {
 					}else{
 						party = 'Democrat';
 					}
-					 '<span>Name:</span><li>' + "" + firstname + "" + ' ' + "" + lastname + "" + '</li>';
-					 '<span>Chamber:</span><li>' + "" + ucfirst(chamber) + "" + '</li>';
-					 '<span>Party:</span><li>' + "" + party + "" + '</li>';
+					 html.push('<span>Name:</span><li>' + "" + firstname + "" + ' ' + "" + lastname + "" + '</li>');
+					 html.push('<span>Chamber:</span><li>' + "" + ucfirst(chamber) + "" + '</li>');
+					 html.push('<span>Party:</span><li>' + "" + party + "" + '</li>');
 					if (twitterid === ''){
-						 "<li class='clearfix'><span class='fail_icon'></span> No Twitter, you fail " + gender + ".</li>";
+						 html.push("<li class='clearfix'><span class='fail_icon'></span> No Twitter, you fail " + gender + ".</li>");
 					}else{
-						 "<li class='clearfix'><span class='twit_icon'></span> <a href='http://twitter.com/" + twitterid + "' target='new'>@" + twitterid + "</a></li>";
+						 html.push("<li class='clearfix'><span class='twit_icon'></span> <a href='http://twitter.com/" + twitterid + "' target='new'>@" + twitterid + "</a></li>");
 					}
 				}
 			// # print <ul> closing
-				 "</ul>";
-				$('#main').html();
+				 html.push("</ul>");
+				$('#main').html(html.join(''));
 			},
 			error: function(data) {
 				console.log('the getReps.php ajax call failed');
