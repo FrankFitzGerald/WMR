@@ -25,6 +25,7 @@ $(document).ready(function() {
 					var chamber = jsonObject.results[i].chamber;
 					var party = jsonObject.results[i].party;
 					var gender = jsonObject.results[i].gender;
+					var state = jsonObject.results[i].state;
 					if (gender === 'M'){
 						gender = 'Sir';
 					}else{
@@ -36,8 +37,9 @@ $(document).ready(function() {
 						party = 'Democrat';
 					}
 					 html.push('<span>Name:</span><li>' + "" + firstname + "" + ' ' + "" + lastname + "" + '</li>');
-					 html.push('<span>Chamber:</span><li>' + "" + chamber + "" + '</li>');
+					 html.push('<span>Chamber:</span><li>' + "" + $.ucfirst(chamber) + "" + '</li>');
 					 html.push('<span>Party:</span><li>' + "" + party + "" + '</li>');
+					 html.push('<span>State:</span><li>' + "" + state + "" + '</li>');
 					if (twitterid === null){
 						 html.push("<li class='clearfix'><span class='fail_icon'></span> No Twitter, you fail " + gender + ".</li>");
 					}else{
@@ -54,4 +56,23 @@ $(document).ready(function() {
 			}
 		});
 	});
+    $.ucfirst = function(str) {
+
+        var text = str;
+
+
+        var parts = text.split(' '),
+            len = parts.length,
+            i, words = [];
+        for (i = 0; i < len; i++) {
+            var part = parts[i];
+            var first = part[0].toUpperCase();
+            var rest = part.substring(1, part.length);
+            var word = first + rest;
+            words.push(word);
+
+        }
+
+        return words.join(' ');
+    };
 });
