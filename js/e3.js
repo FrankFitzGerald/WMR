@@ -13,11 +13,11 @@ $(document).ready(function() {
 			success: function(responseData){
 				console.log('Success!');
 				var feed = responseData;
-				var jsonObject = json_decode(feed);
+				var jsonObject = feed.results;
 				// print_r($jsonObject);
 				 "<ul>"; 
 				for (var responseKey in jsonObject.response) {		
-			                 var response = jsonObject.response[responseKey];
+			                var response = jsonObject.response[responseKey];
 					firstname = response[0].legislator.firstname;
 					lastname = response[0].legislator.lastname;
 					var twitterid = response[0].legislator.twitter_id;
