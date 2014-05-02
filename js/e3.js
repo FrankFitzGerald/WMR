@@ -23,12 +23,8 @@ $(document).ready(function() {
 			}
 			
 			function find_reps (zip) {
-				var zip_encoded = urlencode(zip);
 				// echo $zip_encoded;
 			
-				var url = "http://whoismyrepresentative.com/getall_mems.php";
-				url += "?zip=" + "" + zip_encoded;
-				url += "&output=json";
 			  	// print "<p>$url</p>";
 			
 				var feed = getResource(url);
