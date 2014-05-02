@@ -10,7 +10,7 @@ $(document).ready(function() {
 			dataType: 'json',
 			type: 'get',
 			url: 'https://congress.api.sunlightfoundation.com/legislators/locate',
-			success: function(data){
+			success: function(responseData){
 				console.log('Success!');
 				var feed = responseData;
 				var jsonObject = json_decode(feed);
