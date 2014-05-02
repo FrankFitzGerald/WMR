@@ -12,9 +12,8 @@ $(document).ready(function() {
 			url: 'https://congress.api.sunlightfoundation.com/legislators/locate',
 			success: function(responseData){
 				console.log('Success!');
-				var feed = responseData;
-				var jsonObject = feed.results;
-				console.log('jsonObject ='+jsonObject.first_name);
+				var jsonObject = responseData;
+				console.log('jsonObject ='+jsonObject.results[0].first_name);
 				// print_r($jsonObject);
 				var html = ['<ul>'];
 				for (var responseKey in jsonObject.response) {		
