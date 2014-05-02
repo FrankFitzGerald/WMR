@@ -1,6 +1,6 @@
 <?php
-if (isset($_POST['zip'])) {
-	find_reps($_POST['zip']);
+if (isset($_GET['zip'])) {
+	find_reps($_GET['zip']);
 }
 
 # uses libcurl to return the response body of a GET request on $url
