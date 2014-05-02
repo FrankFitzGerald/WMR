@@ -9,7 +9,7 @@ $(document).ready(function() {
 			data: 'zip=' + $("#search input[type='text']").val(),
 			type: 'get',
 			dataType: 'jsonp',
-			url: 'http://whoismyrepresentative.com/getall_mems.php?output=jsonp',
+			url: 'http://whoismyrepresentative.com/getall_mems.php?output=json',
 			success: function(responseData) {
 			// # uses libcurl to return the response body of a GET request on $url
 			// function getResource (url){
