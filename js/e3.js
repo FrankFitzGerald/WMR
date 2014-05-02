@@ -12,7 +12,6 @@ $(document).ready(function() {
 			url: 'http://whoismyrepresentative.com/getall_mems.php',
 			success: function(responseData) {
 				find_reps(responseData);
-				$('#main').html(responseData);
 			},
 			error: function(responseData) {
 				console.log('the getReps.php ajax call failed');
@@ -34,11 +33,12 @@ $(document).ready(function() {
 		// print_r($jsonObject);
 	
 		for (var resultKey in jsonObject.results) {		
-	                 var result = jsonObject.results[resultKey];
+	                var result = jsonObject.results[resultKey];
 			var name = result.name;
 			var getlastname = preg_split('/ /', name);
 			find_twitter_username(getlastname[0], getlastname[1]);
 		}
+		$('#main').html(responseData);
 	
 	} // find_reps
 });
