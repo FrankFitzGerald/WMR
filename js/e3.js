@@ -14,7 +14,7 @@ $(document).ready(function() {
 				console.log('Success!');
 				var feed = responseData;
 				var jsonObject = feed.results;
-				console.log('jsonObject ='+eval(jsonObject.first_name));
+				console.log('jsonObject ='+jsonObject.first_name);
 				// print_r($jsonObject);
 				var html = ['<ul>'];
 				for (var responseKey in jsonObject.response) {		
