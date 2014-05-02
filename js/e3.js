@@ -15,8 +15,9 @@ $(document).ready(function() {
 				var jsonObject = responseData;
 				console.log('jsonObject ='+jsonObject.results[0].first_name);
 				// print_r($jsonObject);
-				var html = ['<ul>'];
+				var html = [];
 				for (var i = 0; i < jsonObject.results.length; i++) {
+					html.push('<ul>');
 					console.log('Give me Names! = '+jsonObject.results[i].first_name);
 					var firstname = jsonObject.results[i].first_name;
 					var lastname = jsonObject.results[i].last_name;
@@ -43,9 +44,9 @@ $(document).ready(function() {
 						 html.push("<li class='clearfix'><span class='twit_icon'></span> <a href='http://twitter.com/" + twitterid + "' target='new'>@" + twitterid + "</a></li>");
 					}
 					console.log('Successful Loop!');
+					html.push("</ul>");
 				}
 			// # print <ul> closing
-				 html.push("</ul>");
 				$('#main').html(html.join(''));
 			},
 			error: function(data) {
