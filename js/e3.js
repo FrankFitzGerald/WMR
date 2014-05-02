@@ -32,8 +32,8 @@ $(document).ready(function() {
 	  	// print "<p>$url</p>";
 	
 		// var feed = getResource(url);
-		// var feed = jsonObject;
-		// var jsonObject = json_decode(feed);
+		var feed = jsonObject;
+		var jsonObject = json_decode(feed);
 		// print_r($jsonObject);
 	
 		for (var resultKey in jsonObject.results) {		
@@ -42,7 +42,7 @@ $(document).ready(function() {
 			var getlastname = preg_split('/ /', name);
 			find_twitter_username(getlastname[0], getlastname[1]);
 		}
-		$('#main').html(responseData);
+		$('#main').html();
 	
 	} // find_reps
 });
