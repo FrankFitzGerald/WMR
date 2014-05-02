@@ -7,7 +7,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		$.ajax({
 			data: 'zip=' + $("#search input[type='text']").val() + '&output=json',
-			dataType: 'html',
+			dataType: 'json',
 			type: 'get',
 			url: 'getReps.php',
 			success: function(responseData) {
