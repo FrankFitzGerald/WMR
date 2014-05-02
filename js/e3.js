@@ -8,7 +8,7 @@ $(document).ready(function() {
 		$.ajax({
 			data: 'zip=' + $("#search input[type='text']").val(),
 			dataType: 'html',
-			type: 'post',
+			type: 'get',
 			url: 'getReps.php',
 			success: function(responseData) {
 				$('#main').html(responseData);
