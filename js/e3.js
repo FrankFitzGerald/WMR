@@ -14,7 +14,7 @@ $(document).ready(function() {
 			// xhrFields: {
 			// 	withCredentials: true
 			// },
-			success: function(responseData) {
+			success: {
 				console.log('Success Bitches!');
 				find_reps(responseData);
 			},
