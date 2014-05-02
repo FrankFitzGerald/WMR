@@ -25,7 +25,7 @@ $(document).ready(function() {
 					var chamber = jsonObject.results[i].chamber;
 					var party = jsonObject.results[i].party;
 					var gender = jsonObject.results[i].gender;
-					var state = jsonObject.results[i].state;
+					var state = jsonObject.results[i].state_name;
 					if (gender === 'M'){
 						gender = 'Sir';
 					}else{
