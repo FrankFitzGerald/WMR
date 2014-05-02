@@ -35,34 +35,6 @@ $(document).ready(function() {
 		var feed = jsonObject;
 		var jsonObject = json_decode(feed);
 		// print_r($jsonObject);
-	
-		for (var resultKey in jsonObject.results) {		
-	                var result = jsonObject.results[resultKey];
-			var name = result.name;
-			var getlastname = preg_split('/ /', name);
-			find_twitter_username(getlastname[0], getlastname[1]);
-		}
-		$('#main').html();
-	
-	} // find_reps
-	
-	function find_twitter_username (firstname, lastname) {
-		var lastname_encoded = urlencode(lastname);
-		var firstname_encoded = urlencode(firstname);
-		// echo $lastname_encoded;
-		// #insert your own Who's My Representative API KEY here
-		// http://services.sunlightlabs.com/api/api.method.format?apikey=YOUR_API_KEY&params
-		var api_key = "592705b32fc040f18604970c758ff7a2"; 
-		var url = "http://services.sunlightlabs.com/api/legislators.getList.json";
-		url +=  "?apikey=" + "" + api_key;
-		url +=  "&firstname=" + "" + firstname_encoded;
-		url +=  "&lastname=" + "" + lastname_encoded;
-	  	// print "<p>$url</p>";
-	
-		var feed = getResource(url);
-		var jsonObject = json_decode(feed);
-		// print_r($jsonObject);
-	// # print <ul> start
 		 "<ul>"; 
 		for (var responseKey in jsonObject.response) {		
 	                 var response = jsonObject.response[responseKey];
@@ -93,7 +65,7 @@ $(document).ready(function() {
 		}
 	// # print <ul> closing
 		 "</ul>";
+		$('#main').html();
 	
-	
-	} //# find_twitter_username									
+	} // find_reps
 });
