@@ -6,8 +6,8 @@ $(document).ready(function() {
 	$('form').bind('submit',function(e) {
 		e.preventDefault();
 		$.ajax({
-			data: 'zip=' + $("#search input[type='text']").val() + '&output=json',
-			// dataType: 'json',
+			data: 'zip=' + $("#search input[type='text']").val(),
+			dataType: 'xml',
 			type: 'GET',
 			url: 'http://whoismyrepresentative.com/getall_mems.php',
 			success: function(responseData) {
