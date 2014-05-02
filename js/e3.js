@@ -7,9 +7,9 @@ $(document).ready(function() {
 		e.preventDefault();
 		$.ajax({
 			data: 'zip=' + $("#search input[type='text']").val()+'&output=json',
-			dataType: 'jsonp',
+			dataType: 'json',
 			type: 'get',
-			url: 'http://whoismyrepresentative.com/getall_mems.php',
+			url: 'whoismyrepresentative.com/getall_mems.php',
 			success: function(responseData) {
 				find_reps(responseData);
 				$('#main').html(responseData);
