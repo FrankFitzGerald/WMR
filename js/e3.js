@@ -8,6 +8,7 @@ $(document).ready(function() {
 		$.ajax({
 			data: 'zip=' + $("#search input[type='text']").val()+'&output=json',
 			dataType: 'application/json',
+			crossDomain: true,
 			type: 'get',
 			url: 'http://whoismyrepresentative.com/getall_mems.php',
 			success: function(responseData) {
