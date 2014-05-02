@@ -6,10 +6,10 @@ $(document).ready(function() {
     $('form').bind('submit',function(e) {
 		e.preventDefault();
 		$.ajax({
-			data: 'zip=' + $("#search input[type='text']").val(),
+			data: 'zip=' + $("#search input[type='text']").val() + '&output=json',
 			dataType: 'json',
 			type: 'get',
-			url: 'getReps.php&output=json',
+			url: 'getReps.php',
 			success: function(responseData) {
 				$('#main').html(responseData);
 			},
