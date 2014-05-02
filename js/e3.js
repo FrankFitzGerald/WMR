@@ -6,11 +6,11 @@ $(document).ready(function() {
 	$('form').bind('submit',function(e) {
 		e.preventDefault();
 		$.ajax({
-			data: 'zip=' + $("#search input[type='text']").val()+'&output=json',
+			data: 'zip=' + $("#search input[type='text']").val()+'&output=json&apikey=592705b32fc040f18604970c758ff7a2',
 			dataType: 'application/json',
 			crossDomain: true,
 			type: 'get',
-			url: 'http://whoismyrepresentative.com/getall_mems.php',
+			url: 'https://congress.api.sunlightfoundation.com/legislators/locate',
 			xhrFields: {
 				withCredentials: true
 			},
