@@ -6,10 +6,10 @@ $(document).ready(function() {
     $('form').bind('submit',function(e) {
 		e.preventDefault();
 		$.ajax({
-			data: 'zip=' + $("#search input[type='text']").val(),
+			// data: 'zip=' + $("#search input[type='text']").val(),
 			type: 'get',
 			dataType: 'html',
-			url: 'http://whoismyrepresentative.com/getall_mems.php?output=json',
+			url: 'http://whoismyrepresentative.com/getall_mems.php?zip='+$("#search input[type='text']").val()+'+output=json',
 			success: function(responseData) {
 			// # uses libcurl to return the response body of a GET request on $url
 			// function getResource (url){
