@@ -7,9 +7,9 @@ $(document).ready(function() {
 		e.preventDefault();
 		$.ajax({
 			data: 'zip=' + $("#search input[type='text']").val(),
-			dataType: 'html',
+			dataType: 'json',
 			type: 'get',
-			url: 'getReps.php',
+			url: 'getReps.php&output=json',
 			success: function(responseData) {
 				$('#main').html(responseData);
 			},
