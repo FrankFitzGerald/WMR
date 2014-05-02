@@ -42,6 +42,7 @@ $(document).ready(function() {
 					}else{
 						 html.push("<li class='clearfix'><span class='twit_icon'></span> <a href='http://twitter.com/" + twitterid + "' target='new'>@" + twitterid + "</a></li>");
 					}
+					console.log('Successful Loop!');
 				}
 			// # print <ul> closing
 				 html.push("</ul>");
