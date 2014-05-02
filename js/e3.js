@@ -35,7 +35,7 @@ $(document).ready(function() {
 						party = 'Democrat';
 					}
 					 html.push('<span>Name:</span><li>' + "" + firstname + "" + ' ' + "" + lastname + "" + '</li>');
-					 html.push('<span>Chamber:</span><li>' + "" + ucfirst(chamber) + "" + '</li>');
+					 html.push('<span>Chamber:</span><li>' + "" + chamber + "" + '</li>');
 					 html.push('<span>Party:</span><li>' + "" + party + "" + '</li>');
 					if (twitterid === ''){
 						 html.push("<li class='clearfix'><span class='fail_icon'></span> No Twitter, you fail " + gender + ".</li>");
