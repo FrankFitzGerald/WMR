@@ -42,8 +42,8 @@ $(document).ready(function() {
 					 html.push('<span>Chamber:</span><li>' + "" + $.ucfirst(chamber) + "" + '</li>');
 					 html.push('<span>Party:</span><li>' + "" + party + "" + '</li>');
 					 html.push('<span>State:</span><li>' + "" + state + "" + '</li>');
-					 html.push('<span>Phone:</span><li>' + "<a href='tel:"+phone+"'target="new">" + phone + "</a>" + '</li>');
-					 html.push('<span>Website:</span><li>' + "<a href='"+website+"'target="new">" + website + "</a>" + '</li>');
+					 html.push('<span>Phone:</span><li>' + "<a href='tel:"+phone+"'target='new'>" + phone + "</a>" + '</li>');
+					 html.push('<span>Website:</span><li>' + "<a href='"+website+"'target='new'>" + website + "</a>" + '</li>');
 					if (twitterid === null){
 						 html.push("<li class='clearfix'><span class='fail_icon'></span> No Twitter, you fail " + gender + ".</li>");
 					}else{
