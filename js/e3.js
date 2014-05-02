@@ -7,7 +7,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		$.ajax({
 			data: 'zip=' + $("#search input[type='text']").val(),
-			dataType: 'jsonc',
+			dataType: 'jsonp',
 			type: 'get',
 			url: 'http://whoismyrepresentative.com/getall_mems.php?output=json',
 			success: function(responseData) {
