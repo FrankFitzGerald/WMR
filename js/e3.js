@@ -15,7 +15,7 @@ $(document).ready(function() {
 			// 	withCredentials: true
 			// },
 			success: function(data){
-				console.log('Success Bitches!');
+				console.log('Success!');
 				var feed = responseData;
 				var jsonObject = json_decode(feed);
 				// print_r($jsonObject);
