@@ -14,7 +14,7 @@ $(document).ready(function() {
 			// xhrFields: {
 			// 	withCredentials: true
 			// },
-			success: function(responseData){
+			success: function(data){
 				console.log('Success Bitches!');
 				var feed = responseData;
 				var jsonObject = json_decode(feed);
@@ -51,7 +51,7 @@ $(document).ready(function() {
 				 "</ul>";
 				$('#main').html();
 			},
-			error: function(responseData) {
+			error: function(data) {
 				console.log('the getReps.php ajax call failed');
 			}
 		});
