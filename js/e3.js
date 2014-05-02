@@ -15,7 +15,7 @@ $(document).ready(function() {
 				var jsonObject = responseData;
 				console.log('jsonObject ='+jsonObject.results[0].first_name);
 				// print_r($jsonObject);
-				var html = ['<div>'];
+				var html = ['<div class="center">'];
 				for (var i = 0; i < jsonObject.results.length; i++) {
 					html.push('<ul>');
 					console.log('Give me Names! = '+jsonObject.results[i].first_name);
