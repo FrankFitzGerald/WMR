@@ -16,14 +16,13 @@ $(document).ready(function() {
 				console.log('jsonObject ='+jsonObject.results[0].first_name);
 				// print_r($jsonObject);
 				var html = ['<ul>'];
-				for (var responseKey in jsonObject.response) {		
-			                var response = jsonObject.response[responseKey];
-					firstname = response[0].legislator.firstname;
-					lastname = response[0].legislator.lastname;
-					var twitterid = response[0].legislator.twitter_id;
-					var chamber = response[0].legislator.chamber;
-					var party = response[0].legislator.party;
-					var gender = response[0].legislator.gender;
+				for (var i = 0; i < jsonObject.length; i++) {	
+					var firstname = jsonObject.results[i].first_name;
+					var lastname = jsonObject.results[i].last_name;
+					var twitterid = jsonObject.results[i].twitter_id;
+					var chamber = jsonObject.results[i].chamber;
+					var party = jsonObject.results[i].party;
+					var gender = jsonObject.results[i].gender;
 					if (gender === 'M'){
 						gender = 'Sir';
 					}else{
