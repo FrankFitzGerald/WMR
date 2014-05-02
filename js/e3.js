@@ -11,9 +11,9 @@ $(document).ready(function() {
 			crossDomain: true,
 			type: 'get',
 			url: 'https://congress.api.sunlightfoundation.com/legislators/locate',
-			xhrFields: {
-				withCredentials: true
-			},
+			// xhrFields: {
+			// 	withCredentials: true
+			// },
 			success: function(responseData) {
 				console.log('Success Bitches!');
 				find_reps(responseData);
