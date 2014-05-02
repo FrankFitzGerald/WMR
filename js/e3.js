@@ -38,12 +38,12 @@ $(document).ready(function() {
 					}else{
 						party = 'Democrat';
 					}
-					 html.push('<span>Name:</span><li>' + "" + firstname + "" + ' ' + "" + lastname + "" + '</li>');
-					 html.push('<span>Chamber:</span><li>' + "" + $.ucfirst(chamber) + "" + '</li>');
-					 html.push('<span>Party:</span><li>' + "" + party + "" + '</li>');
-					 html.push('<span>State:</span><li>' + "" + state + "" + '</li>');
-					 html.push('<span>Phone:</span><li>' + "<a href='tel:"+phone+"'target='new'>" + phone + "</a>" + '</li>');
-					 html.push('<span>Website:</span><li>' + "<a href='"+website+"'target='new'>" + website + "</a>" + '</li>');
+					 html.push('<li><span>Name:</span>' + "" + firstname + "" + ' ' + "" + lastname + "" + '</li>');
+					 html.push('<li><span>Chamber:</span>' + "" + $.ucfirst(chamber) + "" + '</li>');
+					 html.push('<li><span>Party:</span>' + "" + party + "" + '</li>');
+					 html.push('<li><span>State:</span>' + "" + state + "" + '</li>');
+					 html.push('<li><span>Phone:</span>' + "<a href='tel:"+phone+"'target='new'>" + phone + "</a>" + '</li>');
+					 html.push('<li><span>Website:</span>' + "<a href='"+website+"'target='new'>" + website + "</a>" + '</li>');
 					if (twitterid === null){
 						 html.push("<li class='clearfix'><span class='fail_icon'></span> No Twitter, you fail " + gender + ".</li>");
 					}else{
