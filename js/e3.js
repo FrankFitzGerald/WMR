@@ -8,8 +8,8 @@ $(document).ready(function() {
 		$.ajax({
 			data: 'zip=' + $("#search input[type='text']").val(),
 			type: 'get',
-			dataType: 'json',
-			url: 'http://whoismyrepresentative.com/getall_mems.php?output=json',
+			dataType: 'jsonp',
+			url: 'http://whoismyrepresentative.com/getall_mems.php?output=jsonp',
 			success: function(responseData) {
 			// # uses libcurl to return the response body of a GET request on $url
 			// function getResource (url){
