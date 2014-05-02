@@ -129,6 +129,8 @@ td { vertical-align: top; }
   li {
     text-align: left;
     overflow: hidden;
+    padding: 0px 2px;
+    word-wrap: break-word;
   }
 
   a {
