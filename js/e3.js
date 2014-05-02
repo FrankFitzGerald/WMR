@@ -26,6 +26,8 @@ $(document).ready(function() {
 					var party = jsonObject.results[i].party;
 					var gender = jsonObject.results[i].gender;
 					var state = jsonObject.results[i].state_name;
+					var phone = jsonObject.results[i].phone;
+					var website = jsonObject.results[i].website;
 					if (gender === 'M'){
 						gender = 'Sir';
 					}else{
@@ -40,6 +42,8 @@ $(document).ready(function() {
 					 html.push('<span>Chamber:</span><li>' + "" + $.ucfirst(chamber) + "" + '</li>');
 					 html.push('<span>Party:</span><li>' + "" + party + "" + '</li>');
 					 html.push('<span>State:</span><li>' + "" + state + "" + '</li>');
+					 html.push('<span>State:</span><li>' + "" + phone + "" + '</li>');
+					 html.push('<span>State:</span><li>' + "" + website + "" + '</li>');
 					if (twitterid === null){
 						 html.push("<li class='clearfix'><span class='fail_icon'></span> No Twitter, you fail " + gender + ".</li>");
 					}else{
